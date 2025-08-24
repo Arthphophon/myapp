@@ -3,5 +3,5 @@ document.querySelector('.login-button').addEventListener('click', () => {
 });
 
 document.querySelector('.signup-button').addEventListener('click', () => {
-    window.location.href = 'SignUp.html'; // This will send the user to SignUp.html
+    window.location.href = 'signup.html'; // This will send the user to SignUp.html
 });
