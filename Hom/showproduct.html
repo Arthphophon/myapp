@@ -26,29 +26,69 @@
         </main>
 
         <!-- Bottom Navigation -->
-  <nav class="nav-bar">
-      <a href="#" class="nav-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12l-7-7V3a1 1 0 00-1-1H4a2 2 0 00-2 2v14a2 2 0 002 2h7l-1 1" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v10h10M12 12V2" />
-          </svg>
-          <span>Products</span>
-      </a>
-      <a href="#" class="nav-item" onclick="window.location.href='addproduct.html'">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
-          </svg>
-          <span>Add</span>
-      </a>
-      <a href="#" class="nav-item active">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 14h1m-1-4h.01M16 16h-3V8h3l3 3h-3z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
-          </svg>
-          <span>Food</span>
-      </a>
-  </nav>
+<nav class="nav-bar">
+    <a href="#" class="nav-item active" id="nav-products">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12l-7-7V3a1 1 0 00-1-1H4a2 2 0 00-2 2v14a2 2 0 002 2h7l-1 1" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v10h10M12 12V2" />
+        </svg>
+        <span>Products</span>
+    </a>
+    <a href="#" class="nav-item" id="nav-add">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+        </svg>
+        <span>Add</span>
+    </a>
+    <a href="#" class="nav-item" id="nav-food">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 14h1m-1-4h.01M16 16h-3V8h3l3 3h-3z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+        </svg>
+        <span>Food</span>
+    </a>
+</nav>
     </div>
+    <div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>ยืนยันการลบ</h2>
+        <p>คุณแน่ใจหรือไม่ว่าต้องการลบรายการนี้?</p>
+        <div class="modal-buttons">
+            <button id="confirmDeleteBtn" class="confirm-btn">ตกลง</button>
+            <button class="cancel-btn" onclick="closeModal()">ยกเลิก</button>
+        </div>
+    </div>
+</div>
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeEditModal()">&times;</span>
+        <h2>Edit Product</h2>
+        <form id="editForm">
+            <input type="hidden" id="editProductId">
+            
+            <div class="form-group">
+                <label for="editProductName">Name</label>
+                <input type="text" id="editProductName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="editProductDate">Expiration Date</label>
+                <input type="date" id="editProductDate" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="editProductImage">Image URL</label>
+                <input type="url" id="editProductImage" required>
+            </div>
+            
+            <div class="modal-buttons">
+                <button type="submit" class="confirm-btn">Save Changes</button>
+                <button type="button" class="cancel-btn" onclick="closeEditModal()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
 
     <script src="js/showproduct.js"></script>
 </body>

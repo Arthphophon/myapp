@@ -212,7 +212,6 @@ body {
     margin-bottom: 0;
 }
 
-
 .add-icon {
     font-size: 40px !important;
 }
@@ -220,4 +219,111 @@ body {
 .nav-label {
     font-size: 12px;
     margin-top: 4px;
+}
+
+/* Modal (กล่องป๊อปอัพ) */
+.modal {
+    display: none; /* ซ่อนกล่องป๊อปอัพไว้ในตอนแรก */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6); /* พื้นหลังทึบแสง */
+    /* ลบบรรทัด 'display: flex;' ตรงนี้ออก */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.modal h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.modal p {
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.confirm-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #bdc3c7;
+    color: #333;
+}
+
+/* เพิ่ม animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+/* Modal form styling */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.modal .modal-buttons {
+    margin-top: 20px;
 }
