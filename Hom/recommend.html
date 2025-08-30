@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Detail</title>
+  <link rel="stylesheet" href="css/recommend.css">
+</head>
+<body>
+
+  <!-- ปุ่ม Back -->
+  <div class="header">
+    <button class="back-btn" onclick="window.location.href='foodmenu.html'">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- กล่องรายละเอียดอาหาร -->
+  <div class="food-detail">
+    <img src="img/food1.png" alt="ผัดกะเพราหมูไข่ดาว" class="food-img">
+
+    <h2>ผัดกะเพราหมูไก่ราดไข่เจียว</h2>
+
+    <p><strong>โดยมีวัตถุดิบหลักสำหรับผัดกะเพราได้แก่</strong></p>
+    <ul>
+      <li>หมูบด</li>
+      <li>ไก่บด</li>
+      <li>ใบกะเพราสด</li>
+      <li>พริก</li>
+      <li>กระเทียม</li>
+      <li>น้ำปลา</li>
+      <li>น้ำมันหอย</li>
+      <li>น้ำตาลทราย</li>
+      <li>ซีอิ๊วดำเล็กน้อย</li>
+      <li>ไข่ไก่</li>
+    </ul>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <nav class="nav-bar">
+      <a href="#" class="nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12l-7-7V3a1 1 0 00-1-1H4a2 2 0 00-2 2v14a2 2 0 002 2h7l-1 1" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v10h10M12 12V2" />
+          </svg>
+          <span>Products</span>
+      </a>
+      <a href="#" class="nav-item" onclick="window.location.href='addproduct.html'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+          </svg>
+          <span>Add</span>
+      </a>
+      <a href="#" class="nav-item active">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 14h1m-1-4h.01M16 16h-3V8h3l3 3h-3z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+          </svg>
+          <span>Food</span>
+      </a>
+  </nav>
+
+</body>
+</html>

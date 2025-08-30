@@ -1,0 +1,171 @@
+/***************** Food menu ************/
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Arial", sans-serif;
+  background-color: #e0f7fa;
+  color: #333;
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(180deg, #e0f7fa 0%, #e0f7fa 100%);
+  padding: 40px 20px 70px;
+  display: flex;
+  justify-content: center; /* จัดเนื้อหาให้อยู่ตรงกลางแนวนอน */
+  align-items: center;     /* จัดเนื้อหาให้อยู่ตรงกลางแนวตั้ง */
+  position: relative;
+  z-index: 10;
+  background-image: url('image/pic1.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Header content */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ทำให้ content ภายในอยู่กลาง */
+  z-index: 5;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0; /* ลบ margin-left เดิม */
+  color: #333;
+}
+
+/* Cloud Wave SVG */
+.cloud-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 1;
+
+  filter: drop-shadow(0 -4px 8px #75bef166);
+  fill: url(#blueGradient); /* ใช้ไล่สีจากบนลงล่าง */
+}
+
+
+
+/* Category Buttons */
+.category {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 40px auto 20px;
+    flex-wrap: wrap;
+}
+
+.category button {
+    background-color: #e0f7fa;
+    border: 1px solid #00b0ff;
+    color: #0d47a1;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.category button.active {
+    background-color: #fff;
+    color: #f44336;
+    border: 2px solid #f44336;
+    font-weight: bold;
+}
+
+.category button:hover {
+    background: #b3e5fc;
+    color: #01579b;
+    border-color: #0288d1;
+}
+
+/* Food Cards */
+.food-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 0 16px 80px;
+}
+
+.food-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.food-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.food-card p {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 600; /* หนาขึ้นให้เหมือนในภาพ */
+}
+
+/* Bottom Nav */
+.nav-bar {
+    position: fixed; /* ติดขอบล่างตลอด */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    z-index: 100;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #aaa;
+    font-size: 12px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-item.active {
+    color: #01579b;
+}
+
+.nav-item:hover {
+    color: #01579b;
+}
+
+.nav-item svg {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+.form-section-header h2 {
+    margin-bottom: 0;
+}
+
+

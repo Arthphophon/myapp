@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="css/styles1.css">
+<script src="js/index1.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-content">
+      <a href="foodmenu.html" class="back-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+              viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </a>
+      <h1>Add Product</h1>
+    </div>
+
+    <svg class="cloud-wave" viewBox="0 0 1440 320" 
+          xmlns="http://www.w3.org/2000/svg">
+      <path fill="#e0f7fa" fill-opacity="1" 
+            d="M0,224 C360,360 1080,120 1440,240 L1440,320 L0,320 Z"></path>
+    </svg>
+</header>
+
+<main class="container">
+    <div class="form-section">
+        <div class="input-group">
+            <div class="form-section-header">
+                <h2>Product Photo</h2>
+                <div id="barcodeDisplay" class="barcode-placeholder" onclick="openBarcodeScanner()">
+    <span>Tap to Scan</span>
+</div>
+            </div>
+            <p class="description">Add a clear photo of your product</p>
+
+            <div class="photo-upload" onclick="openCamera()">
+                <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none" onchange="previewPhoto(event)">
+                <div id="photoPreview">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                          fill="none" stroke="currentColor" stroke-width="1.5" 
+                          stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <path d="M14 2v6h6M10 18v-6m-3 3h6" />
+                    </svg>
+                    <span>Tap to add photo</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <h2>Product Name</h2>
+            <p class="description">Enter the name of your product</p>
+            <input type="text" placeholder="กรอกชื่อสินค้า">
+        </div>
+
+        <div class="input-group">
+            <div class="form-section-header">
+                <h2>Category</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" 
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" 
+                          stroke-width="2" 
+                          d="M7 7h.01M7 3h5.929a2 2 0 011.414.586l7.071 7.071a2 2 0 010 2.828l-5.929 5.929a2 2 0 01-2.828 0L3.586 14.414a2 2 0 01-.586-1.414V7a4 4 0 014-4z" />
+                </svg>
+            </div>
+            <p class="description">Choose the product category</p>
+            <select class="select-input">
+                <option value="" disabled selected>เลือกหมวดหมู่</option>
+                <option value="food">ของสด</option>
+                <option value="drink">เครื่องดื่ม</option>
+                <option value="snack">ขนม</option>
+                <option value="prepared">ของปรุงสำเร็จ</option>
+                <option value="sauce">ซอส/เครื่องปรุง</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <h2>Date</h2>
+            <p class="description">When does this product expire</p>
+            <input type="date" value="2025-07-31">
+        </div>
+        
+        <button class="add-button">Add Product</button>
+    </div>
+</main>
+
+<nav class="nav-bar">
+    <a href="#" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" 
+                  d="M21 12l-7-7V3a1 1 0 00-1-1H4a2 2 0 00-2 2v14a2 2 0 002 2h7l-1 1" />
+            <path stroke-linecap="round" stroke-linejoin="round" 
+                  d="M12 2v10h10M12 12V2" />
+        </svg>
+        <span>Products</span>
+    </a>
+    <a href="#" class="nav-item active">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" 
+              viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" 
+                  d="M12 4v16m8-8H4" />
+        </svg>
+        <span>Add</span>
+    </a>
+    <a href="foodmenu.html" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 14h1m-1-4h.01M16 16h-3V8h3l3 3h-3z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+        </svg>
+        <span>Food</span>
+    </a>
+</nav>
+
+</body>
+</html>

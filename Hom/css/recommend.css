@@ -1,0 +1,105 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+/* ปุ่ม Back */
+.header {
+  margin-bottom: 10px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.back-btn svg {
+  width: 28px;
+  height: 28px;
+  stroke: #01579b; /* สีฟ้า */
+}
+
+/* กล่องรายละเอียดอาหาร */
+.food-detail {
+  background-color: #d9f2ff;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.food-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.food-detail h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.food-detail p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.food-detail ul {
+  text-align: left;
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+/* Bottom Nav */
+.nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    z-index: 100;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #aaa;
+    font-size: 12px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-item.active {
+    color: #01579b;
+}
+
+.nav-item:hover {
+    color: #01579b;
+}
+
+.nav-item svg {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
