@@ -1,0 +1,305 @@
+/* --- Global Reset & Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  background-color: #f0f4f8; /* Changed background for a softer look */
+  color: #333;
+  margin-bottom: 70px;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: linear-gradient(135deg, #42a5f5, #478ed1);
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* --- Main Container --- */
+.container {
+  max-width: 500px;
+  margin: -50px auto 0 auto; /* Pulls the form up over the header wave */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 3;
+  
+  /* --- FIX: เพิ่มพื้นที่ด้านล่างเพื่อไม่ให้ปุ่มโดน Nav Bar บัง --- */
+  padding-bottom: 20px; 
+}
+
+/* --- Image Upload Box --- */
+.image-upload {
+  margin-bottom: 25px;
+}
+
+.image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 180px;
+  border: 2px dashed #d0d5dd;
+  border-radius: 12px;
+  background-color: #f9fafb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #667085;
+}
+
+.image-box:hover {
+  border-color: #4caf50;
+  background-color: #f0fdf4;
+  color: #4caf50;
+}
+
+.image-box svg {
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover svg {
+    transform: scale(1.1);
+}
+
+.image-box span {
+  font-weight: 500;
+}
+
+/* --- Form Elements --- */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #344054;
+  font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Prompt", sans-serif;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* --- Input Group (เพิ่มฟอนต์และขนาดให้เหมือน form-group) --- */
+.input-group {
+  font-size: 1rem;
+  font-family: "Prompt", sans-serif;
+  color: #344054;
+}
+
+.input-group input,
+.input-group textarea {
+  font-size: 1rem;
+  font-family: "Prompt", sans-serif;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+/* For two-column layout */
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+.form-row .form-group {
+    flex: 1;
+}
+
+/* --- Toggle Switch for Notification --- */
+.notification-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+}
+.notification-toggle label {
+    margin-bottom: 0;
+}
+.toggle-switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  -webkit-appearance: none;
+  background: #ccc;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.toggle-switch:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  background: white;
+  transition: 0.3s;
+}
+.toggle-switch:checked {
+  background: #4caf50;
+}
+.toggle-switch:checked:before {
+  transform: translateX(20px);
+}
+
+#notifyBox {
+  margin-top: 15px;
+  padding: 15px;
+  border-left: 4px solid #81c784;
+  background-color: #f0fdf4;
+  border-radius: 0 8px 8px 0;
+}
+
+/* --- Save Button --- */
+#saveBtn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #42a5f5, #1e88e5); /* เปลี่ยนเป็นฟ้า */
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+  font-family: "Prompt", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3); /* ปรับให้เข้ากับโทนฟ้า */
+  margin-top: 10px;
+}
+
+#saveBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30, 136, 229, 0.4); /* ปรับ hover ให้เข้ากับฟ้า */
+}
+
+
+/* Bottom Navigation */
+/* Bottom Navigation */
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  height: 60px;
+  z-index: 1000;
+}
+
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #666;
+  font-size: 12px;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-item .material-icons {
+  font-size: 24px;
+  margin-bottom: 2px;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  color: #1976d2; /* ฟ้า */
+}
+
+.bottom-nav.hide {
+  transform: translateY(100%);
+}
+.header-actions {
+  display: flex;
+  gap: 12px; /* ระยะห่างระหว่างปุ่ม */
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.logo-img {
+  height: 45px;  /* ปรับตามขนาด */
+ 
+  width: auto;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .header-content h1 {
+    font-size: 2rem;
+  }
+  .container {
+    max-width: 700px;
+  }
+}

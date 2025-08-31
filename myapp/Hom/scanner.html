@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barcode Scanner</title>
+  <script src="https://unpkg.com/html5-qrcode" defer></script>
+  <link rel="stylesheet" href="css/barcode.css">
+</head>
+<body>
+  <h1>สแกนบาร์โค้ด</h1>
+  <div id="reader"></div>
+
+  <script>
+    // ฟังก์ชันส่งค่ากลับไป addproduct.html
+    function onScanSuccess(decodedText) {
+      console.log("Scanned:", decodedText);
+
+      if (window.opener && !window.opener.closed) {
+        window.opener.updateBarcodeValue(decodedText);
+        window.close();
+      } else {
+        alert("Scanned barcode: " + decodedText);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const html5QrCode = new Html5Qrcode("reader");
+
+      html5QrCode.start(
+        { facingMode: "environment" }, // กล้องหลัง
+        { fps: 10, qrbox: { width: 250, height: 250 } },
+        (decodedText) => {
+          html5QrCode.stop();
+          onScanSuccess(decodedText);
+        },
+        (error) => { /* ignore errors */ }
+      ).catch(err => {
+        console.error("Camera start failed:", err);
+      });
+    });
+  </script>
+</body>
+</html>

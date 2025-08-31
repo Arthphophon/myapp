@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เพิ่มอาหาร</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+  
+ <!-- Header -->
+<header class="app-header">
+  <div class="logo">
+    <img src="img/logo.png" alt="Fresh Check Logo" class="logo-img">
+    <span class="logo-text">Fresh Check</span>
+  </div>
+  <div class="header-actions">
+    <button class="menu-btn material-icons">notifications</button>
+    <button class="menu-btn material-icons">account_circle</button>
+  </div>
+</header>
+    <svg class="cloud-wave" viewBox="0 0 1440 320" 
+          xmlns="http://www.w3.org/2000/svg">
+      <path fill="#e0f7fa" fill-opacity="1" 
+            d="M0,224 C360,360 1080,120 1440,240 L1440,320 L0,320 Z">
+      </path>
+    </svg>
+  </header>
+
+
+  <div class="container">
+    <div class="image-upload">
+      <input type="file" id="foodImage" accept="image/*" hidden>
+      <label for="foodImage" class="image-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-camera"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+        <span>แตะเพื่อเพิ่มรูปภาพ</span>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for="foodName">ชื่อ</label>
+      <input type="text" id="foodName" placeholder="เช่น เค้กส้มหน้านิ่ม">
+    </div>
+
+    <div class="form-group">
+      <label for="foodTag">แท็ก</label>
+      <input type="text" id="foodTag" placeholder="เช่น เบเกอรี่, ขนมหวาน, ส้ม">
+    </div>
+
+    <div class="input-group">
+            
+            <p class="description">หมวดหมู่</p>
+            <select class="select-input">
+                <option value="" disabled selected>เลือกหมวดหมู่</option>
+                <option value="food">ของสด</option>
+                <option value="drink">เครื่องดื่ม</option>
+                <option value="prepared">ของปรุงสำเร็จ</option>
+                <option value="sauce">ซอส/เครื่องปรุง</option>
+            </select>
+        </div>
+    
+    <div class="form-row">
+        <div class="form-group">
+          <label for="foodAmount">ปริมาณ</label>
+          <input type="number" id="foodAmount" value="1" min="1">
+        </div>
+
+        <div class="form-group">
+          <label for="shelfLife">อายุการเก็บ (วัน)</label>
+          <input type="number" id="shelfLife" value="7" min="1">
+        </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="produceDate">วันที่ผลิต</label>
+      <input type="date" id="produceDate">
+    </div>
+
+    <div class="form-group">
+      <label for="expireDate">วันหมดอายุ</label>
+      <input type="date" id="expireDate">
+    </div>
+
+    <div class="form-group notification-toggle">
+      <label for="enableNotify">
+        เปิดใช้การแจ้งเตือน
+      </label>
+      <input type="checkbox" id="enableNotify" class="toggle-switch">
+    </div>
+    <div id="notifyBox" style="display:none;">
+        <label for="notifyDays">แจ้งเตือนก่อนหมดอายุ (วัน)</label>
+        <input type="number" id="notifyDays" value="3" min="1">
+    </div>
+
+    <div class="form-group">
+      <label for="description">คำอธิบาย (ถ้ามี)</label>
+      <textarea id="description" rows="4" placeholder="รายละเอียดเพิ่มเติมเกี่ยวกับอาหาร..."></textarea>
+    </div>
+
+    <button id="saveBtn">บันทึกข้อมูล</button>
+  </div>
+
+  
+  <nav class="nav-bar">
+  <a href="#" class="nav-item ">
+    <span class="material-icons">home</span>
+    <span>Home</span>
+  </a>
+  <a href="#" class="nav-item active">
+    <span class="material-icons">qr_code_scanner</span>
+    <span>Scan</span>
+  </a>
+  <a href="foodmenu.html" class="nav-item">
+    <span class="material-icons">restaurant</span>
+    <span>Food</span>
+  </a>
+  <a href="#" class="nav-item">
+    <span class="material-icons">account_circle</span>
+    <span>Profile</span>
+  </a>
+</nav>
+
+
+
+  <script src="js/index1.js"></script>
+
+</body>
+</html>
