@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Menu</title>
+  <link rel="stylesheet" href="css/style2.css">
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+<header class="app-header">
+  <div class="logo">
+    <img src="img/logo.png" alt="Fresh Check Logo" class="logo-img">
+    <span class="logo-text">Fresh Check</span>
+  </div>
+  <div class="header-actions">
+    <button class="menu-btn material-icons">notifications</button>
+    <button class="menu-btn material-icons">account_circle</button>
+  </div>
+</header>
+
+  
+
+  <!-- Food Cards -->
+  <main class="food-container">
+    <div class="food-card">
+      <a href="recommend.html">
+        <img src="img/food1.png" alt="ผัดกะเพราหมูไก่ราดไข่เจียว">
+      </a>
+      <p>ผัดกะเพราหมูไก่ราดไข่เจียว</p>
+    </div>
+    <div class="food-card">
+      <a href="recommend.html">
+        <img src="img/food2.png" alt="แกงจืดไข่น้ำหมูไก่">
+      </a>
+      <p>แกงจืดไข่น้ำหมูไก่</p>
+    </div>
+    <div class="food-card">
+      <a href="recommend.html">
+        <img src="img/food3.png" alt="ไข่ตุ๋นหมูสับไก่สับ">
+      </a>
+      <p>ไข่ตุ๋นหมูสับไก่สับ</p>
+    </div>
+    <div class="food-card">
+      <a href="recommend.html">
+        <img src="img/food4.png" alt="ข้าวผัดหมูไก่">
+      </a>
+      <p>ข้าวผัดหมูไก่</p>
+    </div>
+  </main>
+
+  <!-- Bottom Navigation -->
+    <footer class="bottom-nav">
+      <a href="#" class="nav-item ">
+        <span class="material-icons">home</span>
+        <span>Home</span>
+      </a>
+      <a href="addproduct.html" class="nav-item">
+        <span class="material-icons">qr_code_scanner</span>
+        <span>Scan</span>
+      </a>
+      <a href="#" class="nav-item active">
+        <span class="material-icons">restaurant</span>
+        <span>Food</span>
+      </a>
+      <a href="profile.html" class="nav-item">
+        <span class="material-icons">account_circle</span>
+        <span>Profile</span>
+      </a>
+    </footer>
+
+    <script>
+  const cat = document.querySelector('.category');
+  if (cat) {
+    cat.addEventListener('wheel', (e) => {
+      // ถ้า scroll แนวตั้งมากกว่าแนวนอน ให้แปลงเป็นแนวนอน
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        cat.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+  }
+</script>
+
+
+</body>
+</html>

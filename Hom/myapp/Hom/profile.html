@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Profile Page</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+  <div class="profile-container">
+
+    <!-- Header Glass -->
+    <div class="profile-header glass-card">
+      <div class="avatar-glow">
+        <div class="avatar" id="avatar"></div>
+      </div>
+      <input type="file" id="avatarInput" accept="image/*" style="display:none;">
+      <h2>John Doe</h2>
+      <p class="user-role">@Johnnie_AppUser</p>
+    </div>
+
+    <div class="card glass-card">
+  <h3><span class="material-icons">info</span> About us</h3>
+  <p class="app-description">
+   ดูแลตู้เย็นของคุณให้สดใหม่ พร้อมรับไอเดียเมนูอร่อยจากสิ่งที่คุณมี
+  </p>
+</div>
+
+
+    <!-- Account Card -->
+    <div class="card glass-card">
+      <h3><span class="material-icons">account_circle</span> Account</h3>
+      <button class="btn-logout">🚪 Log Out</button>
+    </div>
+
+  </div>
+
+  <!-- Bottom Navigation -->
+  <footer class="bottom-nav glass-bar">
+    <a href="#" class="nav-item">
+      <span class="material-icons">home</span>
+      <span>Home</span>
+    </a>
+    <a href="addproduct.html" class="nav-item">
+      <span class="material-icons">qr_code_scanner</span>
+      <span>Scan</span>
+    </a>
+    <a href="foodmenu.html" class="nav-item">
+      <span class="material-icons">restaurant</span>
+      <span>Food</span>
+    </a>
+    <a href="#" class="nav-item active">
+      <span class="material-icons">account_circle</span>
+      <span>Profile</span>
+    </a>
+  </footer>
+
+  <script src="js/profile.js"></script>
+</body>
+</html>

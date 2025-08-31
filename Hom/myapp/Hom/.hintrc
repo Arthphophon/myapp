@@ -6,8 +6,8 @@
     "axe/forms": [
       "default",
       {
-        "select-name": "off",
-        "label": "off"
+        "label": "off",
+        "select-name": "off"
       }
     ],
     "compat-api/html": [
@@ -21,17 +21,10 @@
     "axe/name-role-value": [
       "default",
       {
+        "link-name": "off",
         "button-name": "off"
       }
     ],
-    "no-inline-styles": "off",
-    "compat-api/css": [
-      "default",
-      {
-        "ignore": [
-          "backdrop-filter"
-        ]
-      }
-    ]
+    "no-inline-styles": "off"
   }
 }
